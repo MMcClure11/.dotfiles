@@ -4,3 +4,4 @@ end
 
 source /usr/local/opt/asdf/libexec/asdf.fish
 set -gx STOW_DIR ~/.dotfiles
+source /usr/local/opt/asdf/libexec/asdf.fish
