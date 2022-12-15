@@ -5,6 +5,7 @@ end
 # source /usr/local/opt/asdf/libexec/asdf.fish
 set -gx STOW_DIR ~/.dotfiles
 set -gx ERL_FLAGS "-kernel shell_history enabled"
+set -Ux ERL_AFLAGS "-kernel shell_history enabled"
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
