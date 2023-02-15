@@ -3,16 +3,6 @@ return {
 
   config = {
     hijack_directories = { enable = false },
-    renderer = {
-      icons = {
-        show = {
-          file = false,
-          folder = false,
-          folder_arrow = false,
-          git = false,
-        },
-      }
-    },
   },
 
   cmd = {
