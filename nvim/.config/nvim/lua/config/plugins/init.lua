@@ -1,4 +1,5 @@
 return {
+  "voldikss/vim-floaterm",
   -- Editing
   "tpope/vim-surround",
 
