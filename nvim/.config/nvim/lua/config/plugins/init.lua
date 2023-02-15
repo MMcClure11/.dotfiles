@@ -1,8 +1,9 @@
 return {
-  "voldikss/vim-floaterm",
+  { "voldikss/vim-floaterm", keys = {
+    { "<Leader>g", "<cmd>FloatermNew --width=0.9 --height=0.9 lazygit<cr>", desc = "Open lazygit in Floaterm" }
+  } },
   -- Editing
   "tpope/vim-surround",
-
   -- Navigation
   "andymass/vim-matchup",
   "justinmk/vim-dirvish",
