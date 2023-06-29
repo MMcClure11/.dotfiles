@@ -36,4 +36,7 @@ return {
   "tpope/vim-repeat",
   "tpope/vim-rsi",
   "tpope/vim-unimpaired",
+
+  -- Trying it out!
+  "tpope/vim-projectionist",
 }
