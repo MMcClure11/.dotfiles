@@ -8,6 +8,25 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
   },
+  config = function()
+    local telescope = require("telescope")
+    local global_mappings = {
+      i = {
+        ["<C-n>"] = "cycle_history_next",
+        ["<C-p>"] = "cycle_history_prev",
+      },
+    }
+    telescope.setup({
+      pickers = {
+        find_files = {
+          mappings = global_mappings,
+        },
+        live_grep = {
+          mappings = global_mappings,
+        },
+      },
+    })
+  end,
 
   keys = {
     { "<Leader>/", function() builtin("current_buffer_fuzzy_find") end, desc = "Search" },
