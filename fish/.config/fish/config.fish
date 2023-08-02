@@ -12,7 +12,6 @@ set -Ux ERL_AFLAGS "-kernel shell_history enabled"
 set -Ux EDITOR nvim
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
 direnv hook fish | source
 
 alias g='git'
