@@ -1,7 +1,12 @@
 return {
-  { "voldikss/vim-floaterm", keys = {
-    { "<Leader>g", "<cmd>FloatermNew --width=0.9 --height=0.9 lazygit<cr>", desc = "Open lazygit in Floaterm" }
-  } },
+  { "voldikss/vim-floaterm",
+    config = function()
+      vim.g.floaterm_width = 0.9
+      vim.g.floaterm_height = 0.9
+    end,
+    keys = {
+      { "<Leader>g", "<cmd>FloatermNew lazygit<cr>", desc = "Open lazygit in Floaterm" }
+    } },
 
   -- Editing
   "tpope/vim-surround",
