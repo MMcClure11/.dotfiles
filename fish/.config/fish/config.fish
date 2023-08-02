@@ -3,6 +3,7 @@ if status is-interactive
   function fish_user_key_bindings
     fish_vi_key_bindings
   end
+  starship init fish | source
   # TODO: learn fish, display random message, lol
   set fish_greeting "hello meks, do awesome"
 end
