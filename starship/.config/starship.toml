@@ -13,7 +13,6 @@ $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
-$elixir\
 $erlang\
 $lua\
 $nodejs\
@@ -30,10 +29,6 @@ $time\
 $status\
 $shell\
 $character"""
-
-# prevents warning
-# [WARN] - (starship::utils): Executing command "/Users/mmcclure/.asdf/shims/elixir" timed out.
-command_timeout = 1800
 
 # use NerdFont from Kitty to display official Elixir symbol
 [elixir]
