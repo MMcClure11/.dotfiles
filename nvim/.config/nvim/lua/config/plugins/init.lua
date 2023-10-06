@@ -18,6 +18,16 @@ return {
       on_save_enabled = true,
       on_save_pattern = { "*.heex", "*.ex" }
     },
+    -- Remove trailing white space on save
+    {
+      "mcauley-penney/tidy.nvim",
+      config = {
+        filetype_exclude = { "markdown", "diff" }
+      },
+      init = function()
+        vim.keymap.set('n', "<leader>te", require("tidy").toggle, {})
+      end
+    }
   },
 
   -- Navigation
