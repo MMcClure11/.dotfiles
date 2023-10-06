@@ -1,12 +1,14 @@
 return {
-  { "voldikss/vim-floaterm",
+  {
+    "voldikss/vim-floaterm",
     config = function()
       vim.g.floaterm_width = 0.9
       vim.g.floaterm_height = 0.9
     end,
     keys = {
       { "<Leader>g", "<cmd>FloatermNew lazygit<cr>", desc = "Open lazygit in Floaterm" }
-    } },
+    }
+  },
 
   -- Editing
   "tpope/vim-surround",
@@ -39,7 +41,8 @@ return {
   "sheerun/vim-polyglot",
 
   -- Source Control
-  { "lewis6991/gitsigns.nvim",
+  {
+    "lewis6991/gitsigns.nvim",
     config = {
       current_line_blame = true,
     }
