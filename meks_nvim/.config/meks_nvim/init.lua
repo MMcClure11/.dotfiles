@@ -44,3 +44,18 @@ vim.opt.termguicolors = true
 -- Will make the editor feel a little snappier in some situations
 vim.opt.updatetime = 1000
 
+-- SEARCH
+-- INC COMMAND
+-- Incremental command
+-- Default is 'nosplit', 'split' shows all the found instances in a popup window.
+vim.opt.inccommand = 'split'
+-- default for `/` is case sensitive
+-- makes searches case insensitive
+vim.opt.ignorecase = true
+-- if any part of the search is uppercase, turn on case sensitivity for the search
+vim.opt.smartcase = true
+-- grep program, default is grep
+-- rg is the faster more modern version of grep
+-- tells rg to output the results in a format that the quickfix list can understand.
+vim.opt.grepprg = 'rg --vimgrep'
+
