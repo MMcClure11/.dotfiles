@@ -18,3 +18,8 @@ source /opt/homebrew/opt/asdf/libexec/asdf.fish
 direnv hook fish | source
 
 alias g='git'
+
+# --add could also be -a
+# abbr will expand the command out when you type it
+# this will open the new meks_nvim instead of my base nvim that is tied to my dotfiles.
+abbr --add meks_nvim NVIM_APPNAME=meks_nvim nvim
