@@ -36,3 +36,11 @@ vim.opt.laststatus = 3
 -- this says my terminal emulator (kitty) can display the full range of colors
 vim.opt.termguicolors = true
 
+-- UPDATETIME
+-- Default is 4000, this is the delay time for 2 triggers
+-- 1. by default vim will by default will create a backup file. If something crashes it will try to recover (swap files). It will create these more frequently.
+-- 2. 'cursorhold' this is an auto command. Can be used by different plugins to do things like highlight the text you are hovering over.
+-- Something that would be cool to do, hover over an error and have the menu display the full error. This timeout would govern how long you have to hover to trigger that action.
+-- Will make the editor feel a little snappier in some situations
+vim.opt.updatetime = 1000
+
