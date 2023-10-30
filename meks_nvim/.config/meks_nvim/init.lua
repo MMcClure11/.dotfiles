@@ -26,3 +26,6 @@ vim.opt.smartindent = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
+-- line numbers
+vim.opt.number = true
+
