@@ -20,3 +20,9 @@ vim.opt.expandtab = true
 -- when you press <cr> it will smartly indent you if you are in a block.
 vim.opt.smartindent = true
 
+-- SPLITS
+-- default it will bring the new window above for horizonal splits. New window
+-- goes to the left for vertical splits. Well that’s wrong. Fix it.
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
