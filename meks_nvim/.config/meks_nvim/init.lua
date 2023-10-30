@@ -59,3 +59,8 @@ vim.opt.smartcase = true
 -- tells rg to output the results in a format that the quickfix list can understand.
 vim.opt.grepprg = 'rg --vimgrep'
 
+-- KEY MAPS
+
+-- my leader key
+vim.g.mapleader = ' '
+
