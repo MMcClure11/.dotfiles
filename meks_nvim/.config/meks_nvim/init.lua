@@ -4,3 +4,19 @@
 -- also `:help cursorline`
 vim.opt.cursorline = false
 
+-- INDENTATION
+-- default tab is 8 spaces
+-- we have 3 opts we need to adjust to fix this
+-- make the variable local, variables are global by default in lua
+-- local will bind it to this file (the lua module)
+local indent = 2
+vim.opt.shiftwidth = indent
+vim.opt.softtabstop = indent
+vim.opt.tabstop = indent
+
+-- weird things will happen without this. What? It is a mystery. You don’t want to know.
+vim.opt.expandtab = true
+
+-- when you press <cr> it will smartly indent you if you are in a block.
+vim.opt.smartindent = true
+
