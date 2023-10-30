@@ -76,3 +76,8 @@ vim.keymap.set('n', '<leader>s', function()
   print('sourced buffer')
 end, { desc = 'source the current buffer' })
 
+-- Ask for opt name, will go look it up, then print it out
+vim.keymap.set('n', '<leader>o', function()
+  local user_opt = vim.fn.input('enter opt name: ')
+  print(vim.opt[user_opt]:get())
+end, { desc = 'takes an arg for an opt, looks it up, and prints its current value' })
