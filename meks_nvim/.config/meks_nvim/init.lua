@@ -29,3 +29,6 @@ vim.opt.splitright = true
 -- line numbers
 vim.opt.number = true
 
+-- GLOBAL STATUS LINE
+vim.opt.laststatus = 3
+
