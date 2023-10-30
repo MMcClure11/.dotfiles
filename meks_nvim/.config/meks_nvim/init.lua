@@ -32,3 +32,7 @@ vim.opt.number = true
 -- GLOBAL STATUS LINE
 vim.opt.laststatus = 3
 
+-- COLORS
+-- this says my terminal emulator (kitty) can display the full range of colors
+vim.opt.termguicolors = true
+
