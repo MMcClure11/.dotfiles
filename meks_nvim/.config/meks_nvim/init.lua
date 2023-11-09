@@ -1,3 +1,8 @@
+-- can be meks.keymaps, makes it look more module like
+-- can chain it (put normal commands into a normal module, and have the keymaps
+-- module require that mod)
+require("meks/keymaps")
+
 -- opt is a “map” with a key cursorline
 -- you can “inspect” via the command line `:= vim.opt`
 -- when inspecting, it's helpful to get the value of the opt: `:= vim.opt.cursorline:get()`
@@ -59,25 +64,6 @@ vim.opt.smartcase = true
 -- tells rg to output the results in a format that the quickfix list can understand.
 vim.opt.grepprg = 'rg --vimgrep'
 
--- KEY MAPS
 
--- my leader key
-vim.g.mapleader = ' '
 
--- source the current buffer
--- n for normal mode (ni is normal & insert mode)
--- can use ' or "
--- `:` will work most of the time, but 3% of the time it won’t. “<cmd>” is the same and should always work.
--- cr = carriage return (enter)
--- vim.keymap.set('n', '<leader>s', '<cmd>source %<cr>', {desc = 'source the current buffer'})
--- write a lua function when the third arg becomes more complex
-vim.keymap.set('n', '<leader>s', function()
-  vim.cmd('source %')
-  print('sourced buffer')
-end, { desc = 'source the current buffer' })
 
--- Ask for opt name, will go look it up, then print it out
-vim.keymap.set('n', '<leader>o', function()
-  local user_opt = vim.fn.input('enter opt name: ')
-  print(vim.opt[user_opt]:get())
-end, { desc = 'takes an arg for an opt, looks it up, and prints its current value' })
