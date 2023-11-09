@@ -87,5 +87,33 @@ end
 -- the lazypath is the first thing in the list, so it will probably find the plugins first before the personal modules
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({})
+require("lazy").setup(
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function()
+      -- double [[]] is another way to make a string
+      -- vim.cmd("colorscheme tokyonight")
+      vim.cmd([[colorscheme tokyonight-night]])
+    end
+  },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000
+  }
+)
 
+vim.keymap.set('n', '<leader>c', function()
+  local user_opt = vim.fn.inputlist({ 'select color scheme: ',
+    '1. tokyonight-night', '2. catppuccin'
+  })
+
+  if user_opt == 1 then
+    vim.cmd([[colorscheme tokyonight-night]])
+  elseif user_opt == 2 then
+    vim.cmd.colorscheme "catppuccin"
+  end
+end, { desc = 'switch color schemes' })
