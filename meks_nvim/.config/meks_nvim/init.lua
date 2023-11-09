@@ -88,22 +88,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup(
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-    config = function()
-      -- double [[]] is another way to make a string
-      -- vim.cmd("colorscheme tokyonight")
-      vim.cmd([[colorscheme tokyonight-night]])
-    end
-  },
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000
-  }
+  "meks/plugins"
 )
 
 vim.keymap.set('n', '<leader>c', function()
