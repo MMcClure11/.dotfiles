@@ -1,3 +1,5 @@
+fish_add_path /opt/homebrew/bin
+
 if status is-interactive
 # Commands to run in interactive sessions can go here
   function fish_user_key_bindings
