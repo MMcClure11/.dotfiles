@@ -1,7 +1,14 @@
 return {
-  { "voldikss/vim-floaterm", keys = {
-    { "<Leader>g", "<cmd>FloatermNew --width=0.9 --height=0.9 lazygit<cr>", desc = "Open lazygit in Floaterm" }
-  } },
+  {
+    "voldikss/vim-floaterm",
+    config = function()
+      vim.g.floaterm_width = 0.9
+      vim.g.floaterm_height = 0.9
+    end,
+    keys = {
+      { "<Leader>g", "<cmd>FloatermNew lazygit<cr>", desc = "Open lazygit in Floaterm" }
+    }
+  },
 
   -- Editing
   "tpope/vim-surround",
@@ -13,6 +20,16 @@ return {
       on_save_enabled = true,
       on_save_pattern = { "*.heex", "*.ex" }
     },
+    -- Remove trailing white space on save
+    {
+      "mcauley-penney/tidy.nvim",
+      config = {
+        filetype_exclude = { "markdown", "diff" }
+      },
+      init = function()
+        vim.keymap.set('n', "<leader>te", require("tidy").toggle, {})
+      end
+    }
   },
 
   -- Navigation
@@ -24,7 +41,8 @@ return {
   "sheerun/vim-polyglot",
 
   -- Source Control
-  { "lewis6991/gitsigns.nvim",
+  {
+    "lewis6991/gitsigns.nvim",
     config = {
       current_line_blame = true,
     }
