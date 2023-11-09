@@ -1,4 +1,5 @@
 /fish/.config/fish/fish_variables
+
 # the first `/` means start it the root of the git directory
 # the last `/` means the thing we are ignoring is a folder
 /fish/.config/fish/functions/
