@@ -64,6 +64,28 @@ vim.opt.smartcase = true
 -- tells rg to output the results in a format that the quickfix list can understand.
 vim.opt.grepprg = 'rg --vimgrep'
 
+-- copied verbatim from the github instructions
+-- that path is `/Users/mmcclure/.local/share/meks_nvim`
+-- if the path is not there, clone it and make it.
+-- if it is there, great, move on.
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
 
+-- a list of places on my computer where nvim will look for files that it needs to run
+-- rtp = real time path
+-- nvim is cloning from github to this path
+-- so when you say require telescope, it will check your personal files, then it will go look elsewhere if it doesn’t find it
+-- the lazypath is the first thing in the list, so it will probably find the plugins first before the personal modules
+vim.opt.rtp:prepend(lazypath)
 
+require("lazy").setup({})
 
