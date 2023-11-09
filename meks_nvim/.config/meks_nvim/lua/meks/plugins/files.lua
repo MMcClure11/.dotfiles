@@ -11,5 +11,25 @@ return {
       { '<leader>fg',      '<cmd>Telescope live_grep<cr>',  desc = 'grep files with Telescope' },
       { '<leader><space>', '<cmd>Telescope buffers<cr>',    desc = 'open buffers with Telescope' }
     }
+  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+    },
+    opts = {
+      source_selector = {
+        winbar = true,
+      }
+    },
+    keys = {
+      { '<leader>ee', '<cmd>Neotree action=focus source=filesystem position=left toggle=true reveal=true<cr>',
+                                                                                                                 desc =
+        'toggle explorer' },
+      { '<leader>ef', '<cmd>Neotree reveal_file=%<cr>',                                                        desc =
+      'open explorer to current file' }
+    }
   }
 }
