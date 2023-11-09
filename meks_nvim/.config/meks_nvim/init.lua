@@ -93,12 +93,18 @@ require("lazy").setup(
 
 vim.keymap.set('n', '<leader>c', function()
   local user_opt = vim.fn.inputlist({ 'select color scheme: ',
-    '1. tokyonight-night', '2. catppuccin'
+    '1. tokyonight-night', '2. catppuccin', '3. kanagawa-wave', '4. kanagawa-dragon', '5. kanagawa-lotus'
   })
 
   if user_opt == 1 then
     vim.cmd([[colorscheme tokyonight-night]])
   elseif user_opt == 2 then
     vim.cmd.colorscheme "catppuccin"
+  elseif user_opt == 3 then
+    vim.cmd("colorscheme kanagawa-wave")
+  elseif user_opt == 4 then
+    vim.cmd("colorscheme kanagawa-dragon")
+  elseif user_opt == 5 then
+    vim.cmd("colorscheme kanagawa-lotus")
   end
 end, { desc = 'switch color schemes' })

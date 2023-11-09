@@ -18,6 +18,9 @@ return {
     name = "catppuccin",
     priority = 1000
   },
+  {
+    "rebelot/kanagawa.nvim"
+  },
   -- on demand syntax highlighting
   'sheerun/vim-polyglot'
 }
