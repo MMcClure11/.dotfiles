@@ -10,6 +10,8 @@ return {
   dependencies = {
     { 'williamboman/mason.nvim',           opts = {} },
     { 'williamboman/mason-lspconfig.nvim', opts = { automatic_installation = true } },
+    -- this is for setting up the lua lsp for use with nvim, it requires a lot of extra setup because it is being run inside nvim, this dependency does that for us
+    { 'folke/neodev.nvim',                 opts = {} }
   },
   config = function()
     local lspconfig = require('lspconfig')
@@ -24,5 +26,6 @@ return {
     --  so we don’t need to specify anything extra
     lspconfig.tsserver.setup {}
     lspconfig.sqlls.setup {}
+    lspconfig.lua_ls.setup {}
   end
 }
