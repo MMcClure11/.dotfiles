@@ -28,4 +28,6 @@ return {
     )
   })
   end},
+  -- completion for pairs
+  { "echasnovski/mini.pairs", version = false, config = true }
 }
