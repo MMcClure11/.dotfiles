@@ -88,7 +88,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup(
-  "meks/plugins"
+  "meks/plugins",
+  -- turn off notification every time the nvim config is updated
+  { change_detection = { notify = false } }
 )
 
 vim.keymap.set('n', '<leader>c', function()
