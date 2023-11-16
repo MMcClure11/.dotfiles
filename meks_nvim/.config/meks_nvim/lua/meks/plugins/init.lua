@@ -22,5 +22,10 @@ return {
     "rebelot/kanagawa.nvim"
   },
   -- on demand syntax highlighting
-  'sheerun/vim-polyglot'
+  'sheerun/vim-polyglot',
+  -- whichkey
+  {
+    'folke/which-key.nvim',
+    opts = {}
+  }
 }
