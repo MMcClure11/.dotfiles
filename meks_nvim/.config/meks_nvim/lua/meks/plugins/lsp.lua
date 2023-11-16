@@ -19,5 +19,10 @@ return {
       -- the default is not given for elixir-ls so we have to specify it
       cmd = { 'elixir-ls' }
     }
+
+    --  these two have defaults that include the correct name with `-language-server`
+    --  so we don’t need to specify anything extra
+    lspconfig.tsserver.setup {}
+    lspconfig.sqlls.setup {}
   end
 }
