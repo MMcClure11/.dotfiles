@@ -1,5 +1,6 @@
 -- my leader key
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ','
 
 -- source the current buffer
 -- n for normal mode (ni is normal & insert mode)
