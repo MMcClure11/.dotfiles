@@ -42,9 +42,10 @@ return {
     -- general vim concept
     -- you can attach behaviors to events
     -- good idea to put auto cmds inside autocmd groups so they don’t get duplicated
+    local group = vim.api.nvim_create_augroup('tommy', {})
     vim.api.nvim_create_autocmd("LspAttach",
       {
-        group = vim.api.nvim_create_augroup('tommy', {}),
+        group = group,
         callback = function(event)
           -- IO.inspect converts map into a string that can be printed. vim.print does the same type of thing
           -- we have a buf key in the event table
@@ -57,6 +58,17 @@ return {
           vim.keymap.set("n", "<localleader>d", vim.diagnostic.open_float,
             { desc = "open float with diagnostic description", buffer = event.buf }
           )
+
+          -- adds autoformatting on save
+          -- nvim has autocommands, there are many events that when certain things happen, it emits an event like a message in elxir
+          -- you can handle those events by writing functions that gets called when one of those events happens (auto command) pattern
+          -- "BufWritePre" is an event where there is space between when you tell the buffer to save and before it is written to disk
+          vim.api.nvim_create_autocmd("BufWritePre", {
+            group = group,
+            callback = function()
+              vim.lsp.buf.format()
+            end
+          })
         end
       })
   end
