@@ -112,9 +112,9 @@ vim.keymap.set('n', '<leader>c', function()
 end, { desc = 'switch color schemes' })
 
 -- Temporary hack for when heex files don’t sort Tailwind.
-vim.api.nvim_create_user_command("TailwindHack", function ()
+vim.api.nvim_create_user_command("TailwindHack", function()
   local file_type = vim.bo.filetype
   vim.cmd([[set ft=html]])
   vim.cmd([[TailwindSort]])
   vim.cmd([[set ft=]] .. file_type)
-  end, {})
+end, {})
