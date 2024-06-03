@@ -1,2 +1,9 @@
 Session.vim
 .projections.json
+
+# patterns in gitignore, the more info, the more specific
+# least specific is * (any file, ignores all files)
+# *.txt ignores all files that end in `txt`
+# my_file.txt ignores all files named this regardless of the path
+# start adding the path to get more specific
+__scratch__.ex
