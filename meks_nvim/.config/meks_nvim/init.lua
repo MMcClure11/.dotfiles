@@ -121,3 +121,20 @@ end, {})
 
 -- allow copy/pasting in and out of nvim using the system clipboard
 vim.opt.clipboard = 'unnamedplus'
+
+-- auto commands (ie, when an event happens, do this thing, like formatting on save)
+-- there is a special event called text yank post
+-- Autocommands
+-- take two args, both are tables
+-- the first is a table list with the name of the event
+-- the second is a table map with key value pairs
+-- 	the pattern is required, we use star here since we want it to always be called
+-- 	then the callback is what we want to happen as a result of the 'TextYankPost
+-- 	optionally add a description, so you can see what all autocommands you have that are active.
+vim.api.nvim_create_autocmd({ 'TextYankPost' }, {
+  pattern = '*',
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  desc = "highlights yanked text"
+})
