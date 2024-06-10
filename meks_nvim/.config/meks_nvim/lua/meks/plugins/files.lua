@@ -27,9 +27,10 @@ return {
     end,
 
     keys = {
-      { '<leader>ff',      '<cmd>Telescope find_files<cr>', desc = 'open file finder with Telescope' },
-      { '<leader>fg',      '<cmd>Telescope live_grep<cr>',  desc = 'grep files with Telescope' },
-      { '<leader><space>', '<cmd>Telescope buffers<cr>',    desc = 'open buffers with Telescope' }
+      { '<leader>ff',      '<cmd>Telescope find_files<cr>',                desc = 'open file finder with Telescope' },
+      { '<leader>fF',      '<cmd>Telescope find_files no_ignore=true<cr>', desc = 'open file finder with Telescope and include gitignored files' },
+      { '<leader>fg',      '<cmd>Telescope live_grep<cr>',                 desc = 'grep files with Telescope' },
+      { '<leader><space>', '<cmd>Telescope buffers<cr>',                   desc = 'open buffers with Telescope' }
     }
   },
   {
