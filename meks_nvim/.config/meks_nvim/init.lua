@@ -118,3 +118,6 @@ vim.api.nvim_create_user_command("TailwindHack", function()
   vim.cmd([[TailwindSort]])
   vim.cmd([[set ft=]] .. file_type)
 end, {})
+
+-- allow copy/pasting in and out of nvim using the system clipboard
+vim.opt.clipboard = 'unnamedplus'
