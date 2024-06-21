@@ -21,7 +21,16 @@ source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 direnv hook fish | source
 
+# git aliases
 alias g='git'
+
+# docker aliases
+# stops the container
+alias dcs='docker-compose -f .docker/docker-compose.yml --env-file .docker/.env stop postgres'
+# starts the container
+alias dcu='docker-compose -f .docker/docker-compose.yml --env-file .docker/.env up -d postgres'
+# lists current running containers
+alias dps='docker ps'
 
 # --add could also be -a
 # abbr will expand the command out when you type it
