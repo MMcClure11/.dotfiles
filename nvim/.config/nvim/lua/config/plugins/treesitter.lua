@@ -14,7 +14,7 @@ function M.config()
       "diff",
       "elixir",
       "gitignore",
-      "help",
+      "vimdoc",
       "html",
       "javascript",
       "json",
