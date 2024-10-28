@@ -9,7 +9,7 @@ M.dependencies = {
 function M.config()
   local servers = {
     bashls = {},
-    elixirls = {},
+    lexical = {},
     lua_ls = {
       Lua = {
         telemetry = { enable = false },
@@ -23,7 +23,7 @@ function M.config()
 
   local function on_attach(client, buffer)
     require("config.plugins.lsp.keymaps").setup(client, buffer)
-    require("config.plugins.lsp.formatting").setup(client, buffer)
+    -- require("config.plugins.lsp.formatting").setup(client, buffer)
 
     vim.opt_local.foldmethod = "expr"
     vim.opt_local.foldexpr = "nvim_treesitter#foldexpr()"
