@@ -1,4 +1,5 @@
 fish_add_path /opt/homebrew/bin
+fish_add_path /opt/homebrew/opt/libpq/bin
 fish_add_path ~/.local/share/meks_nvim/mason/bin/
 
 if status is-interactive
@@ -17,7 +18,21 @@ set -gx STOW_DIR ~/.dotfiles
 set -gx ERL_FLAGS "-kernel shell_history enabled"
 set -Ux ERL_AFLAGS "-kernel shell_history enabled"
 set -Ux EDITOR nvim
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
+# source /opt/homebrew/opt/asdf/libexec/asdf.fish
+
+# ASDF configuration code
+if test -z $ASDF_DATA_DIR
+    set _asdf_shims "$HOME/.asdf/shims"
+else
+    set _asdf_shims "$ASDF_DATA_DIR/shims"
+end
+
+# Do not use fish_add_path (added in Fish 3.2) because it
+# potentially changes the order of items in PATH
+if not contains $_asdf_shims $PATH
+    set -gx --prepend PATH $_asdf_shims
+end
+set --erase _asdf_shims
 
 direnv hook fish | source
 
@@ -36,3 +51,5 @@ alias dps='docker ps'
 # abbr will expand the command out when you type it
 # this will open the new meks_nvim instead of my base nvim that is tied to my dotfiles.
 abbr --add meks_nvim NVIM_APPNAME=meks_nvim nvim
+
+set -x PYO3_PYTHON python3
