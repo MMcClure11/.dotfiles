@@ -85,7 +85,7 @@ return {
   },
 
   -- Trying out AI copilot
-  { "github/copilot.vim" }
+  -- { "github/copilot.vim" }
   -- {
   --   "yetone/avante.nvim",
   --   event = "VeryLazy",
