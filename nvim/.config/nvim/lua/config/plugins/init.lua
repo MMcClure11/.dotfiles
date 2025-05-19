@@ -57,6 +57,29 @@ return {
 
   -- Trying it out!
   "tpope/vim-projectionist",
+  -- The below is meant to go in the root of the directory for any elixir project called `projectionist.json` and this file is globally ignored
+  -- gives acces to things like `AV` to open the corresponding test or file
+  -- {
+  --   "lib/*.ex": {
+  --     "alternate": "test/{}_test.exs",
+  --     "type": "source",
+  --     "template": [
+  --       "defmodule {camelcase|capitalize|dot} do",
+  --       "end"
+  --     ]
+  --   },
+  --   "test/*_test.exs": {
+  --     "alternate": "lib/{}.ex",
+  --     "type": "test",
+  --     "template": [
+  --       "defmodule {camelcase|capitalize|dot}Test do",
+  --       "  use ExUnit.Case, async: true",
+  --       "",
+  --       "  alias {camelcase|capitalize|dot}",
+  --       "end"
+  --     ]
+  --   }
+  -- }
 
   {
     "stevearc/conform.nvim",
