@@ -16,6 +16,8 @@ function M.config()
         workspace = { checkThirdParty = false },
       },
     },
+    ts_ls = {},  -- TypeScript/JavaScript language server
+    eslint = {}, -- ESLint for linting
   }
 
   require("neodev").setup({})

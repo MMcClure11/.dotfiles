@@ -26,6 +26,7 @@ function M.config()
       "toml",
       "yaml",
       "heex",
+      "typescript",
     },
     highlight = { enable = true },
     indent = { enable = true },
