@@ -16,3 +16,5 @@ set("n", "<Right>", "<C-w>l")
 set("n", "<Esc>", "<Cmd>nohlsearch<CR>")
 
 set("n", "<Leader>p", "<Cmd>Lazy<CR>", { desc = "Plugins" })
+
+set("n", "<LocalLeader>d", vim.diagnostic.open_float, { desc = "Show diagnostics" })
