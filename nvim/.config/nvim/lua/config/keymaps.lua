@@ -18,3 +18,6 @@ set("n", "<Esc>", "<Cmd>nohlsearch<CR>")
 set("n", "<Leader>p", "<Cmd>Lazy<CR>", { desc = "Plugins" })
 
 set("n", "<LocalLeader>d", vim.diagnostic.open_float, { desc = "Show diagnostics" })
+
+set("n", "<LocalLeader>s", "<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>",
+  { desc = "Document symbols" })
