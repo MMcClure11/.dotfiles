@@ -1,17 +1,13 @@
 local M = { "folke/which-key.nvim" }
 
 function M.config()
-  require("which-key")
+  require("which-key").setup()
 
-  local mappings = {
-    ["<Leader>"] = {
-      ["?"] = { "<Cmd>WhichKey<CR>", "Keys" },
-      e = { name = "explore" },
-      f = { name = "find" },
-    },
-  }
-
-  require("which-key").register(mappings)
+  require("which-key").add({
+    { "<Leader>?", "<Cmd>WhichKey<CR>", desc = "Keys" },
+    { "<Leader>e", group = "explore" },
+    { "<Leader>f", group = "find" },
+  })
 end
 
 return M
