@@ -5,6 +5,7 @@ function M.config()
     style = "night",
   })
 
+  -- Sets the default colorscheme
   vim.cmd.colorscheme("tokyonight")
 end
 
