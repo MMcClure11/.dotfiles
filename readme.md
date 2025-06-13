@@ -33,12 +33,13 @@ GNU Stow for easy deployment and maintenance.
 brew install stow
 ```
 
-**Clone the repository**:
+**Clone the repository and Setup Symlink**:
 
 ```bash
 cd ~
 git clone https://github.com/MMcClure11/.dotfiles
 cd .dotfiles
+stow -t ~/.config .config
 ```
 
 ## How Stow Works
