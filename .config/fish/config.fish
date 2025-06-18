@@ -53,3 +53,6 @@ alias dps='docker ps'
 abbr --add meks_nvim NVIM_APPNAME=meks_nvim nvim
 
 set -x PYO3_PYTHON python3
+
+# Created by `pipx` on 2025-06-18 21:42:58
+set PATH $PATH /Users/mmcclure/.local/bin
