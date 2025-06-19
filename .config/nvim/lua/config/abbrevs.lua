@@ -8,3 +8,4 @@ vim.cmd.iabbrev("Gridpoint", "GridPoint")
 -- Command-line mode
 vim.cmd.cabbrev("Qa", "qa")
 vim.cmd.cabbrev("Xa", "xa")
+vim.cmd.cabbrev("cc", "CodeCompanion")

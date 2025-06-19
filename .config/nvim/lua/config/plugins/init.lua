@@ -106,38 +106,7 @@ return {
       vim.g.db_ui_use_nerd_fonts = 1
     end,
   },
-  {
-    "olimorris/codecompanion.nvim",
-    opts = {
-      strategies = {
-        chat = {
-          adapter = {
-            name = "copilot",
-            model = "claude-sonnet-4-20250514",
-          },
-        },
-      },
-      extensions = {
-        vectorcode = {
-          opts = {
-            add_tool = true,
-          }
-        },
-        mcphub = {
-          callback = "mcphub.extensions.codecompanion",
-          opts = {
-            show_result_in_chat = true, -- Show mcp tool results in chat
-            make_vars = true,           -- Convert resources to #variables
-            make_slash_commands = true, -- Add prompts as /slash commands
-          }
-        }
-      }
-    },
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
-  },
+  -- AI Integration
   {
     "OXY2DEV/markview.nvim",
     lazy = false,
@@ -166,10 +135,6 @@ return {
     end
   },
   {
-    "Davidyz/VectorCode",
-    version = "*",                     -- optional, depending on whether you're on nightly or release
-    build = "pipx upgrade vectorcode", -- optional but recommended. This keeps your CLI up-to-date.
-    dependencies = { "nvim-lua/plenary.nvim" },
   }
 
   -- Trying out AI copilot
